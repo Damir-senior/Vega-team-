@@ -23,7 +23,6 @@ body {
 }
 
 //H-E-A-D-E-R
-
 $nav-link: #f1f1f1;
 $nav-item: 16px;
 $bg-color: #242b33;
@@ -53,14 +52,14 @@ $bg-color: #242b33;
     margin: 0;
     padding: 0;
     display: flex;
-    max-width: 550px;
     flex-wrap: wrap;
+    max-width: 550px;
     margin-top: 30px;
     list-style: none;
     align-items: center;
   }
   &__nav-item + &__nav-item {
-    line-height: 16px;
+    line-height: 25px;
     margin-left: 30px;
   }
   &__nav-link {
@@ -79,6 +78,35 @@ $bg-color: #242b33;
   }
 }
 
+@media only screen and (min-device-width: 480px) and (max-device-width: 768px) {
+  .container {
+    margin: 0 auto;
+  }
+  .header__nav-menu {
+    flex-wrap: wrap;
+    max-width: 100px;
+    position: absolute;
+    top: 0;
+    right: 30px;
+  }
+  .header__nav-item + .header__nav-item {
+    line-height: 25px;
+    margin-left: 0;
+  }
+  .header__nav-link {
+    font-size: 12px;
+  }
+  .header__logo {
+    display: inline-block;
+    width: 200px;
+    margin-top: 30px;
+  }
+  .header__logo-img {
+    max-width: 100%;
+    max-height: 60px;
+    object-fit: contain;
+  }
+}
 //H-E-R-O
 
 .hero {
@@ -104,7 +132,18 @@ $bg-color: #242b33;
     letter-spacing: 3px;
   }
 }
-
+@media only screen and (min-device-width: 480px) and (max-device-width: 768px) {
+  .container {
+    margin: 0 auto;
+  }
+  .hero__content {
+    max-width: 500px;
+  }
+  .hero__title {
+    font-size: 40px;
+    text-align: center;
+  }
+}
 //P-R-O-G-R-E-S-S
 
 .progress {
@@ -156,6 +195,32 @@ $bg-color: #242b33;
     font-size: 45px;
     font-weight: bold;
     color: #4c4d4f;
+  }
+}
+@media only screen and (min-device-width: 480px) and (max-device-width: 768px) {
+  .container {
+    margin: 0 auto;
+  }
+  .achiev {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .achiev__item {
+    margin: 15px;
+    justify-content: center;
+  }
+  @mixin icons {
+    justify-content: center;
+  }
+  .achiev__icon1 {
+    @include icons;
+  }
+  .achiev__icon2 {
+    @include icons;
+  }
+  .achiev__icon3 {
+    @include icons;
   }
 }
 
@@ -245,6 +310,16 @@ $bg-color: #242b33;
   }
 }
 
+@media only screen and (min-device-width: 480px) and (max-device-width: 768px) {
+  .works {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .works__txt {
+    padding-top: 10px;
+  }
+}
+
 //APARTAMENTS
 
 .apartament {
@@ -306,6 +381,35 @@ $bg-color: #242b33;
   }
 }
 
+@media only screen and (min-device-width: 480px) and (max-device-width: 768px) {
+  .container {
+    margin: 0 auto;
+  }
+  .apartament__up {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .apartament__bottom {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  @mixin photo {
+    max-width: 480px;
+  }
+  .apartament__item img {
+    @include photo;
+  }
+  .apartament__item1 img {
+    @include photo;
+  }
+  .apartament__item2 img {
+    @include photo;
+  }
+  .apartament__item3 img {
+    @include photo;
+  }
+}
+
 //F-O-O-T-E-R
 
 .footer {
@@ -313,10 +417,12 @@ $bg-color: #242b33;
   background-size: cover;
   padding-top: 80px;
   padding-bottom: 70px;
+
   .wrapper {
     display: flex;
     justify-content: space-around;
   }
+
   &__title {
     display: inline-block;
     margin: 0;
@@ -364,5 +470,42 @@ $bg-color: #242b33;
     border: none;
     margin-top: 40px;
     color: white;
+  }
+}
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 768px) {
+  .footer__title {
+    display: inline-block;
+    margin: 0;
+    font-family: "Roboto Condensed", serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #d4c17f;
+  }
+  .footer__text {
+    max-width: 380px;
+    min-height: 100px;
+    color: #f1f1f1;
+    font-family: "Roboto", serif;
+    // padding-top: 10px;
+    margin: 0;
+  }
+  .footer__inp-left input {
+    margin-top: 80px;
+    margin-left: 80px;
+    border-radius: 10px;
+    border: none;
+    width: 230px;
+    height: 30px;
+  }
+  .footer__inp-left input:nth-of-type(2) {
+    margin-top: 40px;
+  }
+  .footer__btn-right p {
+    position: absolute;
+    top: -100%;
+  }
+  .footer__btn-right button {
+    margin-left: 80px;
   }
 }
