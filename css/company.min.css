@@ -92,7 +92,7 @@ body {
 }
 
 .header__banner-section {
-  background-image: url("../img/9.jpg");
+  background-image: url("../images/9.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 300px;
@@ -421,4 +421,4 @@ body {
 .footer__title:hover {
   color: #f1f1f1;
 }
-/*# sourceMappingURL=style.min.css.map */
+/*# sourceMappingURL=company.min.css.map */
